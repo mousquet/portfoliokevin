@@ -82,7 +82,11 @@ nav a.active {
     color: var(--logo);
     border-bottom: 2px solid var(--logo);
 }
-
+a i {
+    font-size: 24px; /* Taille de l'icône */
+    color: var(--body2); /* Couleur de l'icône */
+  }
+  
 .page-front {
     text-align: center;
 }

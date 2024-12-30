@@ -1,28 +1,29 @@
-/* Harmonisation générale */
-
+/* Variables pour les couleurs et polices */
 :root {
-  --bg-color: black;
-  --bg-color2: #161616;
-  --body:white;
-  --body2: #dcdcdc;
-  --body3: #fff;
-  --body4: #dcdcdc;
-  --logo: #b74b4b;
-  --logo1: #9f4040;
-  --main-font:'Poppins', sans-serif;
-  --shadow1:rgba(183, 75, 75, 0.5);
-  --shadow2:rgba(183, 75, 75, 0.7);
-  --shadow3: rgba(183, 75, 75, 0.3);
-  --shadow4: rgba(0, 0, 0, 0.5);
- 
+  --bg-color: #121212;
+  --form-bg: #1f1f1f;
+  --text-color: #ffffff;
+  --accent-color: #b74b4b;
+  --accent-hover: #9f4040;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --main-font: 'Poppins', sans-serif;
 }
 
+/* Styles de base */
+*{
+  list-style: none;
+}
 body {
-  font-family: var(--main-font);
-  background-color: var(--bg-color2);
-  color: var(--body);
   margin: 0;
   padding: 0;
+  font-family: var(--main-font);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /* Header */
@@ -40,6 +41,7 @@ header {
   z-index: 100;
 }
 
+
 nav {
   display: flex;
   gap: 1rem;
@@ -52,6 +54,7 @@ nav a {
   transition: 0.3s ease;
   border-bottom: 2px solid transparent;
   padding: 0.3rem;
+  list-style: none;
   text-decoration: none;
 }
 
@@ -61,99 +64,113 @@ nav a.active {
   border-bottom: 2px solid var(--logo);
 }
 
-/* Main Content */
+/* Conteneur principal */
 .page {
-  margin-top: 100px;
-  padding: 3rem 9%;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 80px; /* Pour l'espacement avec le menu fixe */
 }
 
 .title {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
   margin-bottom: 2rem;
-  text-transform: uppercase;
-  color: var(--body3);
-  text-align: center;
 }
 
-/* Contact Form */
+/* Formulaire de contact */
 .contact-box {
-  max-width: 700px;
-  margin: 0 auto;
-  background-color: var(--bg-color2);
-  padding: 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 0 20px var(--shadow3);
+  background-color: var(--form-bg);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  max-width: 500px;
+  width: 100%;
 }
 
-.form-container {
+.contact-box form {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
+/* Champs du formulaire */
 .field {
   width: 100%;
   padding: 1rem;
-  font-size: 1.2rem;
-  border: 1px solid var(--logo);
-  background-color: var(--bg-color2);
-  color: var(--body);
-  border-radius: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: #2a2a2a;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .field:focus {
+  border-color: var(--accent-hover);
+  box-shadow: 0 0 8px var(--accent-hover);
   outline: none;
-  border-color: var(--logo);
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
+  height: 150px;
 }
 
-/* Submit Button */
+/* Bouton d'envoi */
 .btn {
   width: 100%;
   padding: 1rem;
-  background-color: var(--logo);
-  color: var(--body);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background-color: var(--accent-color);
   border: none;
-  border-radius: 1rem;
-  font-size: 1.5rem;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .btn:hover {
-  background-color: var(--logo1);
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
 }
 
-/* Responsive Design */
-@media (max-width: 995px) {
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  /* Menu mobile : appliquer le flou sur le menu */
+  header {
+    backdrop-filter: blur(5px); /* Application du flou au menu */
+  }
+
   nav {
-    gap: 0.1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    backdrop-filter: blur(10px); /* Flou intensifié en mobile */
   }
 
   nav a {
-    font-size: 0.9rem;
-  }
-}
-@media (max-width: 768px) {
-  .page {
-    padding: 2rem;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .field {
     font-size: 1rem;
   }
 
+  /* Formulaire */
+  .contact-box {
+    padding: 1.5rem 2rem;
+    max-width: 400px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
   .btn {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
