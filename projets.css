@@ -3,19 +3,18 @@
 :root {
   --bg-color: black;
   --bg-color2: #161616;
-  --body:white;
+  --body: white;
   --body2: #dcdcdc;
   --body3: #fff;
   --body4: #dcdcdc;
   --logo: #b74b4b;
   --logo1: #9f4040;
-  --main-font:'Poppins', sans-serif;
-  --shadow1:rgba(183, 75, 75, 0.5);
-  --shadow2:rgba(183, 75, 75, 0.7);
+  --main-font: 'Poppins', sans-serif;
+  --shadow1: rgba(183, 75, 75, 0.5);
+  --shadow2: rgba(183, 75, 75, 0.7);
   --shadow3: rgba(183, 75, 75, 0.3);
   --shadow4: rgba(0, 0, 0, 0.5);
-  --shadow5:  rgba(183, 75, 75, 0.8);
- 
+  --shadow5: rgba(183, 75, 75, 0.8);
 }
 
 body {
@@ -83,7 +82,7 @@ section.book {
 
 .workeduc-box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Trois éléments par ligne sur les grands écrans */
   gap: 3rem;
   margin-top: 3rem;
 }
@@ -134,6 +133,7 @@ section.book {
   text-decoration: none;
 }
 
+/* Media Query pour les écrans plus petits */
 @media (max-width: 995px) {
   nav {
     gap: 0.3rem;
@@ -144,6 +144,7 @@ section.book {
   }
 }
 
+/* Media Query pour les écrans encore plus petits */
 @media (max-width: 768px) {
   .title {
     font-size: 4rem;
@@ -163,5 +164,9 @@ section.book {
 
   .workeduc-content a {
     font-size: 1.4rem;
+  }
+
+  .workeduc-box {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Pour les petits écrans, ajuste la taille des éléments */
   }
 }
