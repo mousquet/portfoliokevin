@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --bg-color: black;
+  --bg-color2: #161616;
+  --body:white;
+  --body2: #dcdcdc;
+  --body3: #fff;
+  --body4: #dcdcdc;
+  --logo: #b74b4b;
+  --logo1: #9f4040;
+  --main-font:'Poppins', sans-serif;
+  --shadow1:rgba(183, 75, 75, 0.5);
+  --shadow2:rgba(183, 75, 75, 0.7);
+  --shadow3: rgba(183, 75, 75, 0.3);
+  --shadow4: rgba(0, 0, 0, 0.5);
+  --shadow5:  rgba(183, 75, 75, 0.8);
+ 
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--bg-color);
+  color: var(--body);
+  font-family: "Poppins" sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 5%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  font-size: 1rem;
+  color: var(--body);
+  font-weight: 400;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding: 0.3rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--logo);
+  border-bottom: 2px solid var(--logo);
+}
+
+section.book {
+  padding: 7rem 9% 5rem;
+  min-height: 100vh;
+}
+
+.home-content {
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  color: var(--body);
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.workeduc-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.workeduc-content {
+  background-color: var(--bg-color2);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 15px var(--shadow1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.workeduc-content:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--shadow5);
+}
+
+.workeduc-content .year {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--body);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.workeduc-content h3 {
+  font-size: 2.4rem;
+  color: var(--logo);
+  margin-bottom: 1rem;
+}
+
+.workeduc-content p {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  color: var(--body);
+}
+
+.workeduc-content a {
+  font-size: 1.6rem;
+  color: var(--logo);
+  text-decoration: underline;
+  transition: 0.3s ease;
+}
+
+.workeduc-content a:hover {
+  color: var(--body);
+  text-decoration: none;
+}
+
+@media (max-width: 995px) {
+  nav {
+    gap: 0.3rem;
+  }
+
+  nav a {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .workeduc-content {
+    padding: 1.5rem;
+  }
+
+  .workeduc-content h3 {
+    font-size: 2rem;
+  }
+
+  .workeduc-content p {
+    font-size: 1.4rem;
+  }
+
+  .workeduc-content a {
+    font-size: 1.4rem;
+  }
+}

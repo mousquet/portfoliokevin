@@ -1,0 +1,170 @@
+/* Harmonisation générale */
+:root {
+  --bg-color: black;
+  --bg-color2: #161616;
+  --body:white;
+  --body2: #dcdcdc;
+  --body3: #fff;
+  --body4: #dcdcdc;
+  --logo: #b74b4b;
+  --logo1: #9f4040;
+  --main-font:'Poppins', sans-serif;
+  --shadow1:rgba(183, 75, 75, 0.5);
+  --shadow2:rgba(183, 75, 75, 0.7);
+  --shadow3: rgba(183, 75, 75, 0.3);
+  --shadow4: rgba(0, 0, 0, 0.5);
+ 
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--body);
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 5%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  font-size: 1rem;
+  color: var(--body);
+  font-weight: 400;
+  transition: 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding: 0.3rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--logo);
+  border-bottom: 2px solid var(--logo);
+}
+
+/* Main Content */
+.page {
+  margin-top: 100px;
+  padding: 3rem 9%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  color: var(--body3);
+  text-align: center;
+}
+
+/* Banner Image */
+.banner {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px var(--shadow4);
+  margin-bottom: 2rem;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Portfolio Box */
+.portfolio-box {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.info-box {
+  flex: 1;
+  max-width: 500px;
+  background-color: var(--bg-color2);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 20px var(--shadow3);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px var(--shadow2);
+}
+
+.info-title h3 {
+  font-size: 2rem;
+  color: var(--logo);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: var(--body4);
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 1rem;
+}
+
+ul li::before {
+  content: "•";
+  color: var(--logo);
+  margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 995px) {
+  nav {
+    gap: 0.1rem;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-box {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+}
