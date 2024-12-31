@@ -1,21 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
+/* Harmonisation générale */
 :root {
     --bg-color: black;
+    --bg-color1: #121212;
     --bg-color2: #161616;
+    --form-bg: #1f1f1f;
     --body:white;
     --body2: #dcdcdc;
     --body3: #fff;
     --body4: #dcdcdc;
     --logo: #b74b4b;
     --logo1: #9f4040;
+    --accent-color: #b74b4b;
+    --accent-hover: #9f4040;
     --main-font:'Poppins', sans-serif;
+    --shadow-color: rgba(0, 0, 0, 0.2);
     --shadow1:rgba(183, 75, 75, 0.5);
     --shadow2:rgba(183, 75, 75, 0.7);
     --shadow3: rgba(183, 75, 75, 0.3);
     --shadow4: rgba(0, 0, 0, 0.5);
+    --shadow5: rgba(183, 75, 75, 0.8);
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --text-color: #ffffff;
    
-}
+  }
 
 
 * {
@@ -36,7 +45,7 @@ body {
     background-color: var(--bg-color);
     color: var(--body);
 }
-
+/*header*/
 header {
     margin-top: 20px;
     position: fixed;
@@ -63,29 +72,54 @@ header {
     transform: scale(1.1);
 }
 
-nav {
-    display: flex;
-    gap: 1rem;
+/*navbar*/
+.active {
+    color: var(--accent-color)
+  }
+.navbar {
+    margin-block-end: 0;
+    background: var(--accent-color);
+    width:50%;
+    border-radius: 15px;
 }
+nav a:hover,
+nav a.active {
+    color: var(--bg-color1);
+    border-bottom: 2px solid var(--accent-color);
+}
+.navbar .menu-hamburger {
+    display: flex;
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    width: 35px;
+    display: none;
+}
+.menu-hamburger {
+    cursor: pointer;
 
-nav a {
-    font-size: 1rem;
-    color: var(--body);
+}
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    margin: 10px 20px;
+    
+    
+}
+.navbar a {
+    color: var(--text-color);
+    font-weight: bold;
+    padding: 8px 10px;
+    text-decoration: none;
     font-weight: 400;
     transition: 0.3s ease;
     border-bottom: 2px solid transparent;
-    padding: 0.3rem;
-}
-
-nav a:hover,
-nav a.active {
-    color: var(--logo);
-    border-bottom: 2px solid var(--logo);
-}
-a i {
-    font-size: 24px; /* Taille de l'icône */
-    color: var(--body2); /* Couleur de l'icône */
+    font-size: 0.8rem;
+    
   }
+
   
 .page-front {
     text-align: center;
@@ -209,38 +243,124 @@ a i {
     }
 }
 
-@media(max-width: 995px) {
-    nav {
-        gap: 0.1rem;
-    }
-
-    nav a {
-        font-size: 0.8rem;
-    }
-
+@media (max-width: 995px) {
+    /* Home Section */
     .home {
-        flex-direction: column;
-        margin: 5rem 4rem;
+      flex-direction: column;
+      margin: 5rem 4rem;
     }
-
+  
     .home .home-content h3 {
-        font-size: 2.5rem;
+      font-size: 2.5rem;
     }
-
+  
     .home-content h1 {
-        font-size: 5rem;
+      font-size: 5rem;
     }
-
+  
     .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
+      width: 70vw;
+      margin-top: 4rem;
     }
+  
+    /* Animation Cursor */
     @keyframes cursor {
-        to {
-            border-left: 2px solid var(--logo);
-        }
+      to {
+        border-left: 2px solid var(--logo);
+      }
     }
-}
+  
+    /* Navbar */
+    .navbar {
+      padding: 0;
+    }
+  
+    /* Apparition du menu-burger */
+    .navbar .menu-hamburger {
+      display: block;
+    }
+  
+    /* Nav links */
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.2); /* Fond transparent */
+      backdrop-filter: blur(7px); /* Flou appliqué à l'arrière-plan */
+      width: 100%;
+      height: 100vh;
+      margin-left: -100%;
+      transition: 0.5s ease;
+    }
+  
+    .nav-links a {
+      color: black; /* Texte noir */
+    }
+  
+    .mobile-menu {
+      margin-left: 0;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .nav-links a {
+      font-size: 1.6rem;
+      margin: 15px 0;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .navbar {
+      padding: 0;
+    }
+  
+    /* Apparition du menu-burger */
+    .navbar .menu-hamburger {
+      display: block;
+    }
+  
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(255, 255, 255, 0.2); /* Fond transparent */
+      backdrop-filter: blur(7px); /* Flou appliqué à l'arrière-plan */
+      width: 100%;
+      height: 100vh;
+      margin-left: -100%;
+      transition: 0.5s ease;
+    }
+  
+    .nav-links a {
+      color: black; /* Texte noir */
+    }
+  
+    .mobile-menu {
+      margin-left: 0;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .nav-links a {
+      font-size: 1.6rem;
+      margin: 15px 0;
+    }
+  }
+  
 @media (max-width: 768px) {
     .logo {
         display: none;
