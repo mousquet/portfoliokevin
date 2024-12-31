@@ -190,69 +190,80 @@ header {
   }
 }
 @media (max-width: 768px) {
-    /* WorkEduc Box */
-    .workeduc-box {
-      gap: 1.5rem;
-    }
-  
-    .workeduc-content {
-      max-width: 90%;
-    }
-  
-    .title {
-      font-size: 2.5rem;
-    }
-  
-    .workeduc-content h3 {
-      font-size: 1.8rem;
-    }
-  
-    .workeduc-content p {
-      font-size: 1rem;
-    }
-  
-    /* Navbar */
-    .navbar {
-      padding: 0;
-    }
-  
-    /* Apparition du menu-burger */
-    .navbar .menu-hamburger {
-      display: block;
-    }
-  
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background-color: rgba(255, 255, 255, 0.2); /* Blanc transparent */
-      backdrop-filter: blur(7px); /* Flou de l'arrière-plan */
-      width: 100%;
-      height: 100vh;
-      margin-left: -100%;
-      transition: 0.5s ease;
-    }
-  
-    .nav-links a {
-      color: black;
-    }
-  
-    .mobile-menu {
-      margin-left: 0;
-    }
-  
-    .nav-links ul {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-  
-    .nav-links a {
-      font-size: 1.6rem;
-      margin: 15px 0;
-    }
+  /* WorkEduc Box */
+  .workeduc-box {
+    display: flex;
+    flex-direction: column; /* Pour empiler les éléments verticalement */
+    align-items: center; /* Centre horizontalement */
+    justify-content: center; /* Centre verticalement */
+    gap: 1.5rem; /* Espacement entre les boîtes */
+    width: 100%; /* Prend toute la largeur */
+    padding: 1rem; /* Ajoute un padding pour éviter que le contenu touche les bords */
+    margin: 0 auto; /* Centre le conteneur */
   }
-  
+
+  .workeduc-content {
+    max-width: 90%; /* Limite la largeur des boîtes */
+    text-align: center; /* Centre le texte à l'intérieur */
+    margin: 0 auto; /* Centre horizontalement les boîtes */
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center; /* Centre le titre */
+  }
+
+  .workeduc-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem; /* Ajoute un espacement entre le titre et le contenu */
+  }
+
+  .workeduc-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem; /* Ajoute un espacement sous les paragraphes */
+  }
+
+  /* Navbar */
+  .navbar {
+    padding: 0;
+  }
+
+  /* Apparition du menu-burger */
+  .navbar .menu-hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.2); /* Blanc transparent */
+    backdrop-filter: blur(7px); /* Flou de l'arrière-plan */
+    width: 100%;
+    height: 100vh;
+    margin-left: -100%;
+    transition: 0.5s ease;
+  }
+
+  .nav-links a {
+    color: black;
+  }
+
+  .mobile-menu {
+    margin-left: 0;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-links a {
+    font-size: 1.6rem;
+    margin: 15px 0;
+  }
+}
