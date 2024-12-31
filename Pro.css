@@ -186,3 +186,28 @@ section {
         grid-template-columns: 1fr 1fr; /* 2 éléments par ligne pour les tablettes */
     }
 }
+@media (max-width:450px) {
+    .services-box {
+        display: flex;
+        flex-direction: column; /* Aligne les éléments verticalement */
+        align-items: center; /* Centre horizontalement les blocs */
+        justify-content: center; /* Centre verticalement si nécessaire */
+        gap: 20px; /* Espacement entre les blocs */
+        min-height: 100vh; /* Prend toute la hauteur de l'écran (optionnel) */
+        padding: 20px; /* Espacement interne pour éviter les bordures trop proches */
+    }
+    
+    .services-content {
+        display: flex;
+        flex-direction: column; /* Aligne le contenu interne verticalement */
+        border: 1px solid #ddd; /* Bordure optionnelle */
+        padding: 20px; /* Espacement interne */
+        border-radius: 8px; /* Coins arrondis */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre pour un effet esthétique */
+        width: 80%; /* Ajustez la largeur pour centrer le contenu */
+        max-width: 600px; /* Limite la largeur maximale */
+        text-align: center; /* Centre le texte à l'intérieur */
+    }
+    
+    
+}

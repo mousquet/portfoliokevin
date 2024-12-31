@@ -162,3 +162,16 @@ nav a.active {
         font-size: 1rem;
     }
 }
+@media (max-width: 400px) {
+    .workeduc-box {
+        display: block;
+    }
+
+    .workeduc-content {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+        margin-bottom: 1rem;
+       
+    } 
+}

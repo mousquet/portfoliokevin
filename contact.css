@@ -162,8 +162,12 @@ textarea {
 
   /* Formulaire */
   .contact-box {
-    padding: 1.5rem 2rem;
-    max-width: 400px;
+    padding: 3.5rem 2.2rem;
+    max-width: 350px;
+  }
+  .field {
+    width: 80%;
+    
   }
 
   .title {
@@ -172,5 +176,7 @@ textarea {
 
   .btn {
     font-size: 1rem;
+    max-width: 300px;
+    align-items: center;
   }
 }

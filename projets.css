@@ -172,3 +172,25 @@ section.book {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Pour les petits écrans, ajuste la taille des éléments */
   }
 }
+@media (max-width: 768px) {
+  .workeduc-content {
+    padding: 1.3rem;
+  }
+
+  .workeduc-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .workeduc-content p {
+    font-size: 1.2rem;
+  }
+
+  .workeduc-content a {
+    font-size: 1.1rem;
+  }
+
+  .workeduc-box {
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Pour les petits écrans, ajuste la taille des éléments */
+  }
+
+}
