@@ -6,7 +6,7 @@
   --bg-color1: #121212;
   --bg-color2: #161616;
   --form-bg: #1f1f1f;
-  --body: white;
+  --body:white;
   --body2: #dcdcdc;
   --body3: #fff;
   --body4: #dcdcdc;
@@ -14,14 +14,16 @@
   --logo1: #9f4040;
   --accent-color: #b74b4b;
   --accent-hover: #9f4040;
-  --main-font: "Poppins", sans-serif;
+  --main-font:'Poppins', sans-serif;
   --shadow-color: rgba(0, 0, 0, 0.2);
-  --shadow1: rgba(183, 75, 75, 0.5);
-  --shadow2: rgba(183, 75, 75, 0.7);
+  --shadow1:rgba(183, 75, 75, 0.5);
+  --shadow2:rgba(183, 75, 75, 0.7);
   --shadow3: rgba(183, 75, 75, 0.3);
   --shadow4: rgba(0, 0, 0, 0.5);
+  --shadow5: rgba(183, 75, 75, 0.8);
   --shadow-color: rgba(0, 0, 0, 0.2);
   --text-color: #ffffff;
+ 
 }
 * {
   list-style: none;
