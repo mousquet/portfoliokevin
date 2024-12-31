@@ -124,10 +124,10 @@ nav a.active {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--body);
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   text-transform: uppercase;
   text-align: center;
 }

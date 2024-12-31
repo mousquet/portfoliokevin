@@ -130,12 +130,12 @@ header {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--body);
+  text-align: center;
   font-weight: 700;
   margin-bottom: 2rem;
   text-transform: uppercase;
-  text-align: center;
 }
 
 .workeduc-box {

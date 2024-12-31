@@ -197,6 +197,7 @@ section.book {
 }
 
 
+
 /* Media Query pour les écrans encore plus petits */
 
 @media (max-width: 768px) {
@@ -223,7 +224,7 @@ section.book {
   }
 
   .workeduc-box {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); /* Ajuste la taille des éléments pour les petits écrans */
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); /* Ajuste la taille des éléments pour les petits écrans */
   }
 
   /* Navbar */
